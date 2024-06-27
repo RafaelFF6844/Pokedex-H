@@ -1,0 +1,71 @@
+@font-face {
+  font-family: 'Montserrat Title';
+  src: url('./font/Montserrat-Bold.ttf');
+  /* Add additional src declarations for other formats if necessary */
+}
+
+@font-face {
+  font-family: 'Montserrat Text';
+  src: url('./font/Montserrat-Italic.ttf');
+  /* Add additional src declarations for other formats if necessary */
+}
+
+
+.nav{
+  width: 100%;
+  border: red 1px solid;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  position: absolute;
+  top: 0px;
+}
+
+.nav-logo{
+  width: 64px;
+  height: 64px;
+}
+
+.nav-title{
+  font-family:"Montserrat Title";
+  font-weight: 700;
+  font-size: 22px;
+}
+
+.nav-items{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+
+  margin-left: 50px;
+}
+
+.nav-items div{
+  margin: 20px;
+  font-size: 20px ;
+  font-family:"Montserrat Text";
+  
+}
+
+/* For screens narrower than 600px */
+@media screen and (max-width: 600px) {
+  /* CSS rules here */
+  .nav-logo{
+    width: 40px;
+    height: 40px;
+  }
+  .nav-title{
+    font-size: 15px;
+  }
+
+  .nav-items{
+    margin-left: 5%;
+  }
+
+  .nav-items div{
+    margin: 10px;
+    font-size: 100% ;
+    
+  }
+}
+
