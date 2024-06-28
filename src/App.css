@@ -9,16 +9,19 @@
   src: url('./font/Montserrat-Italic.ttf');
   /* Add additional src declarations for other formats if necessary */
 }
-
+body, html {
+  margin: 0;
+  padding: 0;
+}
 
 .nav{
-  width: 100%;
-  border: red 1px solid;
+  width: 90%;
+  background: #ffffff;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  position: absolute;
-  top: 0px;
+
+  padding: 1%;
 }
 
 .nav-logo{
@@ -44,7 +47,16 @@
   margin: 20px;
   font-size: 20px ;
   font-family:"Montserrat Text";
+}
+
+.content{
   
+  width: 100%; /* 100% of viewport width */
+  height: 50vw; /* Adjust height as needed */
+  
+
+  background: linear-gradient(to top, red, rgb(255, 255, 255)); /* Linear gradient from red to yellow */
+  box-sizing: border-box; /* Ensures border width is included in width calculation */
 }
 
 /* For screens narrower than 600px */
@@ -65,6 +77,12 @@
   .nav-items div{
     margin: 10px;
     font-size: 100% ;
+    
+  }
+
+  .content{
+  
+    height: 100vw; /* Adjust height as needed */
     
   }
 }
