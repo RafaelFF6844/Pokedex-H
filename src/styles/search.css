@@ -1,0 +1,48 @@
+
+.searchbar{
+
+}
+
+.searchbar input{
+    border-radius:22px;
+    border: 3px solid black;
+    
+    outline:none;
+    display:inline-block;
+    width: 30%;
+    height:34px;
+    vertical-align:middle;
+
+    position: relative;
+    top: 50px;
+    left: 32.6%;
+
+    text-align: center;
+    
+}
+
+.searchbar input:focus::placeholder {
+    color: transparent;
+  }
+
+.searchbar input::placeholder {
+    text-align: left; /* Alinea el placeholder a la izquierda */
+    direction: ltr; /* Restaura la dirección del texto del placeholder a izquierda a derecha */
+}
+
+.icon{
+    padding-left: 25px;
+    background: url("../img/pokeicon.png") no-repeat left;
+    background-size: 30px;
+}
+
+
+/* For screens narrower than 600px */
+@media screen and (max-width: 600px) {
+    /* CSS rules here */
+
+    .searchbar input{
+        width: 40%;
+        left: 23.9%;
+    }
+}

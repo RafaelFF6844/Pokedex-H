@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import Search from './components/search'
 import './App.css'
 
 function App() {
@@ -17,7 +18,7 @@ function App() {
       </div>
 
       <div className='content'>
-        
+        <Search />
       </div>
     </>
   )
