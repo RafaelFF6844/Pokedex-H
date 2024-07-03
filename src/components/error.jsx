@@ -3,7 +3,7 @@ import { useState } from 'react'
 const Error = ({text}) => {
 
     return(
-        <div class="alert alert-danger" role="alert">
+        <div class="alert alert-dark" role="alert">
             {text}
         </div>
 

@@ -18,27 +18,33 @@ const Search = () => {
     }
 
     const ConsultarApi = async(pkm) => {
-        const api = await fetch ("https://pokeapi.co/api/v2/pokemon/"+pkm)
-        const rsp = await api.json()
-        console.log(api.status)
-        if (api.status != 200){
-            console.log("hola error")
-            tmpError = {Bvalue:true,msn:"Pokemon no encontrado"}
-            setError({...error,tmpError});
+        if (pkm == null || pkm == ""){
+            console.log("hola error text")
+            setError({Bvalue:true,msn:"Campo Vacio"});
             return;
         }
-        console.log(rsp)
+        try{
+            const api = await fetch ("https://pokeapi.co/api/v2/pokemon/"+pkm)
+            const rsp = await api.json()
+            console.log(api.status)
+            console.log(rsp)
+        }catch(erro){
+            console.log("hola error")
+            setError({Bvalue:true,msn:"Pokemon no encontrado"});
+        }
     }
 
     return(
-        <div className='searchbar'>
-            <input className='icon' placeholder='   Type your Pokemon-Name'
-                value={text}
-                onChange={e => setText(e.target.value)}
-                onKeyDown={Buscar}
-            />
-            {error==true ? <Error text={error.msn} /> :null}
-        </div>
+        <>
+            {error.Bvalue==true ? <Error text={error.msn} /> :null}
+            <div className='searchbar'>
+                <input className='icon' placeholder='   Type your Pokemon-Name'
+                    value={text}
+                    onChange={e => setText(e.target.value)}
+                    onKeyDown={Buscar}
+                />
+            </div>
+        </>
     )
 
 }
