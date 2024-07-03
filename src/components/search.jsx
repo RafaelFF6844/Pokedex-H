@@ -24,6 +24,7 @@ const Search = () => {
             return;
         }
         try{
+            setError({Bvalue:false,msn:""});
             const api = await fetch ("https://pokeapi.co/api/v2/pokemon/"+pkm)
             const rsp = await api.json()
             console.log(api.status)
