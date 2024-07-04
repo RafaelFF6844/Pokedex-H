@@ -1,9 +1,12 @@
 import { useState } from 'react'
 import Search from './components/search'
+import Layout from './components/layout'
 import './App.css'
+
 
 function App() {
   
+  const [data,setData] = useState(null)
 
   return (
     <>
@@ -18,7 +21,9 @@ function App() {
       </div>
 
       <div className='content'>
-        <Search />
+        <Search setData={setData} />
+        {data != null ? <Layout data={data} /> :null}
+        
       </div>
     </>
   )

@@ -3,7 +3,7 @@ import Error from  "./error"
 import '../styles/search.css'
 
 
-const Search = () => {
+const Search = ({setData}) => {
 
     const [text,setText] = useState("")
     const [error,setError] = useState({
@@ -29,6 +29,7 @@ const Search = () => {
             const rsp = await api.json()
             console.log(api.status)
             console.log(rsp)
+            setData(rsp)
         }catch(erro){
             console.log("hola error")
             setError({Bvalue:true,msn:"Pokemon no encontrado"});
