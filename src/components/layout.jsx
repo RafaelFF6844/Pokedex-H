@@ -21,7 +21,15 @@ const Layout = ({data}) => {
                     <div className='card-S-stats'>
                         <h4>Stats</h4>
                         {data.stats.map(stat => (
-                            <li key={"pktype"+stat}>{stat.stat.name} {stat.base_stat}</li>
+                            <p key={"pktype"+stat}>{stat.stat.name} {stat.base_stat}</p>
+                        ))  
+                        }
+                    </div>
+                    <br />
+                    <div className='card-S-moves'>
+                        <h4>Moves</h4>
+                        {data.moves.slice(0,4).map(move => (
+                            <li key={"pktype"+move}>{move.move.name}</li>
                         ))
                         }
                     </div>

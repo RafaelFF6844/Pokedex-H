@@ -13,12 +13,12 @@
 .card-F {
     display: flex;
     flex-direction: column;
-    width: 28%;
+    width: 25%;
 }
 
 .card-F img{
     width: 8em;
-    margin-left: 20%;
+    margin-left: 10%;
 }
 
 .card-F p{
@@ -36,7 +36,8 @@
 .card-S {
     display: flex;
     flex-direction: column;
-    width: 10px;
+    width: 70%;
+    padding: 1%;
 }
 
 .card-S-type {
@@ -53,7 +54,18 @@
     flex-direction: row;
 }
 
-.card-S-stats li {
+.card-S-stats p {
+    margin-left: 25px;
+    font-size: 11px;
+}
+
+
+.card-S-moves {
+    display: flex;
+    flex-direction: row;
+}
+
+.card-S-moves li {
     margin-left: 25px;
 }
 
@@ -66,6 +78,11 @@
         margin-left: 2.5%;
     }
 
+    .card-F {
+        width: 20%;
+        margin-left: 1%;
+    }
+
     .card-F img{
         width: 5em;
     }
@@ -73,6 +90,16 @@
     .card-F h3{
         text-align: center;
         font-size: 18px;
+    }
+
+    .card-S{
+        padding-top: 3%;
+        padding-left: 3%;
+        margin-left: 2%;
+    }
+
+    .card-S-type  {
+
     }
 
     .card-S-type li {
@@ -83,4 +110,31 @@
     .card-S-type h4 {
         font-size: 15px;
     }
+
+
+    
+
+    .card-S-stats {
+        overflow-x: visible;
+        overflow-y: clip;
+    }
+
+    .card-S-stats h4 {
+        font-size: 15px;
+    }
+
+    .card-S-stats p {
+        font-size: 8px;
+        margin-left: 10px;
+    }
+
+    .card-S-moves h4 {
+        font-size: 15px;
+    }
+
+    .card-S-moves li {
+        font-size: 12px;
+        margin-left: 20px;
+    }
+    
 }
